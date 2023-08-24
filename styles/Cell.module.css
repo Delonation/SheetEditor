@@ -1,0 +1,21 @@
+.Cell {
+	font-family: var(--font-family, '--arial');
+	font-size: var(--font-size, 14px);
+	color: var(--color, #000);
+
+	user-select: none;
+	border: 2px solid transparent;
+}
+
+.cellHolder {
+	background-color: #fff;
+}
+
+.cellHolder[data-selected='true'] {
+	border: 1px solid rgba(0, 0, 255, 0.4) !important;
+	background-color: rgba(0, 0, 255, 0.1) !important;
+}
+
+.cellHolder[data-active='true'] {
+	border: 1.5px solid rgba(0, 0, 255, 0.7) !important;
+}

@@ -1,0 +1,106 @@
+.TableHolder {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+.TableTabs {
+	position: absolute;
+	top: 0;
+	left: 2rem;
+
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+
+	transform: translateY(-50%);
+}
+
+.TableTab {
+	background-color: rgb(var(--clr-secondary));
+	color: #2b2b2b;
+
+	padding: 0.5rem 2rem;
+	cursor: pointer;
+}
+
+.TableTab.active {
+	margin-bottom: -2rem;
+	transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.TableTab:hover,
+.TableTab:focus-visible {
+	transform: scale(1.05, 1);
+}
+
+.TableBody {
+	flex: 1;
+	color: #141414;
+	background-color: #fff;
+
+	overflow-y: scroll;
+}
+
+.Table {
+	width: 100%;
+	border-collapse: collapse;
+
+	/* border: 1px solid #e6e6e6; */
+}
+
+.Table thead {
+	background-color: #000;
+	color: #fff;
+}
+
+.Table thead th:not(:first-child) {
+	min-width: 10rem;
+	border-left: 1px solid #a0a8b1;
+}
+
+.Table th,
+.Table td {
+	padding: 1rem;
+	text-align: center;
+}
+
+.Table tbody td:not(:first-child) {
+	border-left: 1px solid #e5e5e6;
+}
+
+/* .Table tbody tr {
+	transition: all 0.2s ease-out;
+} */
+
+.Table tbody tr:not(:first-child) {
+	border-top: 1px solid #e5e5e6;
+	border-bottom: 1px solid #e5e5e6;
+}
+
+/* .Table tbody tr:hover {
+	background-color: rgba(20, 20, 20, 0.1);
+} */
+
+.Table thead tr th:first-child,
+.Table tbody tr td:first-child {
+	width: 5em;
+	min-width: 5em;
+	max-width: 5em;
+	font-size: 0.75rem;
+	word-break: break-all;
+}
+
+.Table tbody tr td {
+	position: relative;
+}
+
+.Table tbody tr td input {
+	position: absolute;
+	inset: 0;
+	text-align: center;
+	border: none;
+	outline: none;
+}

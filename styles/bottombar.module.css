@@ -1,0 +1,37 @@
+.bottombar {
+	display: flex;
+	width: 100%;
+	border-top: #eaeaea 1px solid;
+	background-color: #fff;
+	gap: 0.5rem;
+	padding-inline: 2rem;
+}
+
+.bottombar .tab {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 2rem;
+	cursor: pointer;
+	transition: all 0.2s ease-out;
+}
+
+.bottombar .tab[data-active='true'] {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.bottombar .tab > input[type='radio'] {
+	display: none;
+}
+
+.bottombar .tab > input[type='text'] {
+	position: absolute;
+	inset: 0;
+	z-index: 100;
+	text-align: center;
+	background-color: #eaeaea;
+	border: 1px solid #2318b4;
+	outline: none;
+}
